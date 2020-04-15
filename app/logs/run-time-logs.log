@@ -1,0 +1,76 @@
+(sqlite3.IntegrityError) UNIQUE constraint failed: approvevpn.request_id, approvevpn.approved_by
+[SQL: INSERT INTO approvevpn (public_id, request_id, user_id, approved_by, remarks, approve_as, approved_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('04f64dad-cf99-4f5a-9a35-4ad504076661', '0a1099a7-24ad-4fdb-9c8a-9871c0a795ee', 'e2cc12cc-da90-4a49-86cb-eb1e51d2bd31', '57022958-a54b-470f-b9c5-3cf4204b3b42', 'fgsdggsg', '4', '2020-04-06 08:07:39.465036')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (public_id, name, email, image_file, password, isadmin, can_approve_vpn, can_approve_svr, can_approve_vpn_as, can_approve_svr_as, last_login, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('b5695f24-ad63-4a73-b667-31e8c306bd78', 'A.K Muriithi', 'akmuriithi@fbl.co.ke', 'default.jpg', 'sha256$AVGmrc30$02b2df3b17f287c7d34a8459c2cf8a307b9f4b8032b59e4d3a5a7cb0380f494e', 0, 0, 0, 0, 0, 0, '2020-04-06 09:50:47.189082')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: user_data.phone
+[SQL: INSERT INTO user_data (employee_id, phone, department, function, user_id, created_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (34356353, '0700000000', '56a05e85-d718-4dfb-9f9a-9eca2d493077', 'CISO', '7862acbf-23ae-4f59-882f-5914d0e37288', '2020-04-06 11:49:59.554297')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: user_data.phone
+[SQL: INSERT INTO user_data (employee_id, phone, department, function, user_id, created_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (34356353, '0700000000', '56a05e85-d718-4dfb-9f9a-9eca2d493077', 'CISO', '7862acbf-23ae-4f59-882f-5914d0e37288', '2020-04-06 11:50:13.618866')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: approveserver.user_id, approveserver.approve_as
+[SQL: INSERT INTO approveserver (public_id, request_id, user_id, approved_by, remarks, approve_as, approved_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('59a23364-fb55-4ecd-bae8-378181119d96', '4e189214-6cfe-4b5a-a790-99cd20c4372a', 'e2cc12cc-da90-4a49-86cb-eb1e51d2bd31', '57022958-a54b-470f-b9c5-3cf4204b3b42', 'approved', '4', '2020-04-06 12:05:29.575444')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: approveserver.user_id, approveserver.approve_as
+[SQL: INSERT INTO approveserver (public_id, request_id, user_id, approved_by, remarks, approve_as, approved_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('319ce2f6-039d-42a1-b206-fc42570153ef', '4e189214-6cfe-4b5a-a790-99cd20c4372a', 'e2cc12cc-da90-4a49-86cb-eb1e51d2bd31', '57022958-a54b-470f-b9c5-3cf4204b3b42', 'approved', '4', '2020-04-06 12:05:35.891775')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: approveserver.user_id, approveserver.approve_as
+[SQL: INSERT INTO approveserver (public_id, request_id, user_id, approved_by, remarks, approve_as, approved_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('081343c3-d24e-40c5-8719-fcf8f7e265d1', '4e189214-6cfe-4b5a-a790-99cd20c4372a', 'e2cc12cc-da90-4a49-86cb-eb1e51d2bd31', '57022958-a54b-470f-b9c5-3cf4204b3b42', 'approve asfsdgdkk', '4', '2020-04-06 12:05:49.948890')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: approveserver.user_id, approveserver.approve_as
+[SQL: INSERT INTO approveserver (public_id, request_id, user_id, approved_by, remarks, approve_as, approved_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('3d75a27a-f10c-472b-9832-87b83850b698', '4e189214-6cfe-4b5a-a790-99cd20c4372a', 'e2cc12cc-da90-4a49-86cb-eb1e51d2bd31', '57022958-a54b-470f-b9c5-3cf4204b3b42', 'approve asfsdgdkk', '4', '2020-04-06 12:05:54.217062')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: approveserver.user_id, approveserver.approve_as
+[SQL: INSERT INTO approveserver (public_id, request_id, user_id, approved_by, remarks, approve_as, approved_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('df93e744-fe7d-4add-bd72-7107399c779c', '4e189214-6cfe-4b5a-a790-99cd20c4372a', 'e2cc12cc-da90-4a49-86cb-eb1e51d2bd31', '57022958-a54b-470f-b9c5-3cf4204b3b42', 'approve asfsdgdkk', '4', '2020-04-06 12:05:58.778043')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: approveserver.user_id, approveserver.approve_as
+[SQL: INSERT INTO approveserver (public_id, request_id, user_id, approved_by, remarks, approve_as, approved_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('5243c7c9-4bd0-44ac-a029-dde0ef4f4277', '4e189214-6cfe-4b5a-a790-99cd20c4372a', 'e2cc12cc-da90-4a49-86cb-eb1e51d2bd31', '57022958-a54b-470f-b9c5-3cf4204b3b42', 'approvedddddddddddddddk', '4', '2020-04-06 12:07:49.469810')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: approveserver.user_id, approveserver.approve_as
+[SQL: INSERT INTO approveserver (public_id, request_id, user_id, approved_by, remarks, approve_as, approved_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('789ef276-b03e-435f-9f42-7fb1ccdc55b0', '4e189214-6cfe-4b5a-a790-99cd20c4372a', 'e2cc12cc-da90-4a49-86cb-eb1e51d2bd31', '57022958-a54b-470f-b9c5-3cf4204b3b42', 'approvedddddddddddddddk', '4', '2020-04-06 12:07:55.033568')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: approveserver.user_id, approveserver.approve_as
+[SQL: INSERT INTO approveserver (public_id, request_id, user_id, approved_by, remarks, approve_as, approved_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('90eca3e9-e4eb-4c85-91c1-a5a4b51bec4a', '4e189214-6cfe-4b5a-a790-99cd20c4372a', 'e2cc12cc-da90-4a49-86cb-eb1e51d2bd31', '57022958-a54b-470f-b9c5-3cf4204b3b42', 'vccvbncvcvc', '4', '2020-04-06 12:12:02.039357')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: approvekind.kind_type
+[SQL: INSERT INTO approvekind (kind_type, kind_name, created_at) VALUES (?, ?, ?)]
+[parameters: ('5', 'Chief Operating Officer', '2020-04-07 09:30:40.363719')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: server.req_id
+[SQL: INSERT INTO server (public_id, server, reason, access_rights, access_matrix, req_id, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('19ec970a-7f9b-491a-97da-3b8fd6d20672', '172.34.234.12', 'some justifications', '09113af0-c59a-416f-b02f-5139c0ae2118', 'all tables', 'b9f2cf48-b48e-46d5-8500-6a4b96fd4c2f', '2020-04-07 10:05:10.620447')]
+(Background on this error at: http://sqlalche.me/e/gkpj)name 'approve_as' is not defined(sqlite3.IntegrityError) UNIQUE constraint failed: approveserver.request_id, approveserver.approved_by
+[SQL: INSERT INTO approveserver (public_id, request_id, user_id, approved_by, remarks, approve_as, approved_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('4d0d4b38-4f60-42cd-92a3-108593b213d3', 'b9f2cf48-b48e-46d5-8500-6a4b96fd4c2f', '7353ccda-c291-4dee-bc7d-613f47263fa0', 'b189d9c6-443e-43fe-9477-bb7e40f2a7bc', 'aproved..it is fine', '1', '2020-04-07 11:22:44.086387')]
+(Background on this error at: http://sqlalche.me/e/gkpj)name 'approve_as' is not definedfilter_by() takes 1 positional argument but 2 were given'result' object has no attribute 'public_id''result' object has no attribute 'public_id''result' object has no attribute 'public_id''result' object has no attribute 'public_id''result' object has no attribute 'public_id''result' object has no attribute 'public_id'(sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (public_id, name, email, image_file, password, isadmin, can_approve_vpn, can_approve_svr, can_approve_vpn_as, can_approve_svr_as, last_login, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('a7f9b12d-ca13-4bec-9521-752f8e93aec4', 'P.K. Njoroge', 'pknjoroge@fbl.co.ke', 'default.jpg', 'sha256$UGOwyx6Z$96f3e38877cedc8da42b86d165a282b12425f382c14d62a1d72e358d504249ac', 0, 0, 0, 0, 0, 0, '2020-04-08 09:09:28.882660')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (public_id, name, email, image_file, password, isadmin, can_approve_vpn, can_approve_svr, can_approve_vpn_as, can_approve_svr_as, last_login, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('cbc70508-3c38-44d0-a4d6-92d520a2663e', 'PK Njoroge', 'pknjoroge@fbl.co.ke', 'default.jpg', 'sha256$JcCPNKAk$0b6f01176eb4bd0e0a866e69ab6b6026b88b091fd4d6a0ac3f343d8b8e8355ff', 0, 0, 0, 0, 0, 0, '2020-04-08 09:10:37.978455')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (public_id, name, email, image_file, password, isadmin, can_approve_vpn, can_approve_svr, can_approve_vpn_as, can_approve_svr_as, last_login, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('9de2705f-66b9-4110-b9f5-c62a2bfe0fbd', 'PK Njoroge', 'pknjoroge@fbl.co.ke', 'default.jpg', 'sha256$TJuaEEvv$189422d18bcc2fb52748b1a6aa967edf38c8c1d9d1eba0e0dae3644b14e790ae', 0, 0, 0, 0, 0, 0, '2020-04-08 09:10:40.090883')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (public_id, name, email, image_file, password, isadmin, can_approve_vpn, can_approve_svr, can_approve_vpn_as, can_approve_svr_as, last_login, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('bd31d11a-75f8-4f3f-a847-360b143cc63d', 'PK Njoroge', 'pknjoroge@fbl.co.ke', 'default.jpg', 'sha256$4WVVOSdF$f4c709ffb0d8b9790ed8427b5789756ee0527e887e612020b7440b4d7b6372ea', 0, 0, 0, 0, 0, 0, '2020-04-08 09:10:40.259682')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (public_id, name, email, image_file, password, isadmin, can_approve_vpn, can_approve_svr, can_approve_vpn_as, can_approve_svr_as, last_login, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('cc269766-c905-4ef9-9cec-9c309dff56be', 'PK Njoroge', 'pknjoroge@fbl.co.ke', 'default.jpg', 'sha256$j1gDnqsr$30c98d67cafa8a5be77c6b239946c76e59e2c0bce162aa695853f929f996c6c2', 0, 0, 0, 0, 0, 0, '2020-04-08 09:10:40.465189')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (public_id, name, email, image_file, password, isadmin, can_approve_vpn, can_approve_svr, can_approve_vpn_as, can_approve_svr_as, last_login, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('032eef8b-948c-4d95-a97d-e20463d53203', 'Jack Sikenyi', 'jack.sikenyi@fbl.co.ke', 'default.jpg', 'sha256$cfPDyZzq$f009176649115dd5eca894422a701e77e9d1638a58dfff99ecdcb0de17615a24', 0, 0, 0, 0, 0, 0, '2020-04-08 09:35:53.581260')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (public_id, name, email, image_file, password, isadmin, can_approve_vpn, can_approve_svr, can_approve_vpn_as, can_approve_svr_as, last_login, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('b9d916f4-3565-4345-b15b-3d770dc20e3c', 'Jack Sikenyi', 'jack.sikenyi@fbl.co.ke', 'default.jpg', 'sha256$dRJLd8VJ$74edd3b2eaa651d66c388394f09fa455e40e23569d4caa9b5f6a1c048d02227c', 0, 0, 0, 0, 0, 0, '2020-04-08 09:35:58.164804')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (public_id, name, email, image_file, password, isadmin, can_approve_vpn, can_approve_svr, can_approve_vpn_as, can_approve_svr_as, last_login, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('c427f1d8-a0a3-42e6-b8c4-3e35298ddf99', 'Jack Sikenyi', 'jack.sikenyi@fbl.co.ke', 'default.jpg', 'sha256$fOEF2fgE$95a69eb645cd6b8ec0bd6c79ed826143fa7cadb09850ee5da888dd2fa595dfcf', 0, 0, 0, 0, 0, 0, '2020-04-08 09:35:59.639189')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (public_id, name, email, image_file, password, isadmin, can_approve_vpn, can_approve_svr, can_approve_vpn_as, can_approve_svr_as, last_login, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('f1d978b2-a2c5-4079-a755-5692d0f24e7b', 'Jack Sikenyi', 'jack.sikenyi@fbl.co.ke', 'default.jpg', 'sha256$TruzjA6h$7b3ea875cdd389f31d63252ace42d6a2a5707365a02fd9d37e2ef90d51b31ea0', 0, 0, 0, 0, 0, 0, '2020-04-08 09:36:00.778118')]
+(Background on this error at: http://sqlalche.me/e/gkpj)(sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (public_id, name, email, image_file, password, isadmin, can_approve_vpn, can_approve_svr, can_approve_vpn_as, can_approve_svr_as, last_login, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('01762e21-b147-468f-ab20-55b3f5bafbb8', 'Jack Sikenyi', 'jack.sikenyi@fbl.co.ke', 'default.jpg', 'sha256$pnLHglyy$cb6bc0f89afc7ef89f89567cc80b239d0901b570c19a8be970066eb7443ec068', 0, 0, 0, 0, 0, 0, '2020-04-08 09:36:21.132698')]
+(Background on this error at: http://sqlalche.me/e/gkpj)name 'approve_as' is not definedname 'approve_as' is not definedfilter_by() takes 1 positional argument but 3 were givenEntity '<class 'app.models.Server'>' has no property 'isapproved'Entity '<class 'app.models.Server'>' has no property 'isapproved'
