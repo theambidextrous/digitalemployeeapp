@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
-# load_dotenv()
-load_dotenv('C:\\Apache2.4\\flask-app-env\\AccessRequestBackend\\app\\.env')
+load_dotenv()
+# load_dotenv('.env')
 
 class Config:
     SECRET_KEY = os.getenv('SECRET_KEY')
@@ -11,4 +11,5 @@ class Config:
     MAIL_USE_TLS = os.getenv('SMTP_TLS')
     MAIL_USERNAME = os.getenv('SMTP_USER')
     MAIL_PASSWORD = os.getenv('SMTP_PASS')
+    APP_NAME = os.getenv('APP_NAME')
     LOGS_PATH = os.getenv('LOGS_PATH')

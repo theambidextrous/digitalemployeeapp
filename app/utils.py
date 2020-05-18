@@ -1,7 +1,13 @@
-import jwt
+import os
+import secrets
+import jwt,uuid
 from functools import wraps
 from flask import jsonify, request, current_app
-from app.models import User,Department,UserData,Approveserver,Approvevpn,ServerRequest,VpnRequest
+from app.models import User,UserData,Otp
+from PIL import Image
+from flask_mail import Message
+from datetime import datetime as dt, timedelta as td
+from app import mail
 from app import db
 
 class AuthUtil:
@@ -21,38 +27,36 @@ class AuthUtil:
             return f(sess_instance_user, *args, **kwargs)
         return decorated
 
-class SysAccess:
-    def can_approve(instance_user, user_id):
-        user_dept = UserData.query.filter_by(user_id=user_id).first()
-        if not user_dept: #user has no department
-            return False
-        isuserlinemanager = Department.query.filter_by(line_manager=instance_user, dept_id=user_dept.department).first()
-        if not isuserlinemanager:# is not user's line manager
-            return False
-        return True
-    def is_approved_svr(request_id):
-        user_req_aprvl_count = Approveserver.query.filter(Approveserver.request_id==request_id,Approveserver.approve_as != '00').count()
-        if not user_req_aprvl_count:
-            raise Exception("This request has no approvals. But why?")
-            return False
-        if user_req_aprvl_count == 6:
-            this_req = ServerRequest.query.filter_by(request_id=request_id).first()
-            if not this_req:
-                raise Exception("This request is not found. But why?")
-            this_req.isapproved = True
-            db.session.commit()
+class UserUtil:
+    def save_picture(form_picture):
+        random_hex = secrets.token_hex()
+        f_name, f_ext = os.path.splitext(form_picture.filename)
+        picture_fn = random_hex + f_ext
+        picture_path = os.path.join(current_app.root_path, 'static/src-profiles', picture_fn)
+        output_size = (125, 125)
+        i = Image.open(form_picture)
+        i.thumbnail(output_size)
+        i.save(picture_path)
+        return picture_fn
+    def send_email(user, otp, message = None):
+        message_f = message
+        if not message:
+            message_f = ('Thank you for openning a {} account. It is time to earn! Please use the following OTP to confirm your email and activate your account. OTP: {}').format(current_app.config['APP_NAME'], otp)
+        msg = Message('Digital Employee', sender=current_app.config['MAIL_USERNAME'], recipients=[user.email])
+        msg.body = (message_f)
+        mail.send(msg)
+    def create_otp(user):
+        otp =  str(uuid.uuid4().int>>64)[0:6]
+        new_otp = Otp(public_id=str(uuid.uuid4()), otp=otp, user=user.public_id)
+        db.session.add(new_otp)
+        db.session.commit()
+        return otp
+    def is_valid_otp(user, otp_in):
+        now = dt.now()
+        ten_min_ago = now - timedelta(minutes=10)
+        otp_stored = Otp.query.filter(Otp.created_at > ten_min_ago).filter(Otp.created_at > now).filter(Otp.otp == otp_in, Otp.user == user.public_id)
+        if otp_stored:
             return True
         return False
-    def is_approved_vpn(request_id):
-        user_req_aprvl_count = Approvevpn.query.filter(Approvevpn.request_id==request_id, Approvevpn.approve_as != '00').count()
-        if not user_req_aprvl_count:
-            raise Exception("This request has no approvals. But why?")
-            return False
-        if user_req_aprvl_count == 3:
-            this_req = VpnRequest.query.filter_by(request_id=request_id).first()
-            if not this_req:
-                raise Exception("This request is not found. But why?")
-            this_req.isapproved = True
-            db.session.commit()
-            return True
-        return False
+    def agency_code():
+        return str(uuid.uuid4().int>>64)[0:10]

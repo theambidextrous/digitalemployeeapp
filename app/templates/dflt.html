@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>{{title}}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Latest compiled and minified CSS BS 3.0.
+<link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
+<link href="{{url_for('static', filename='css/theme-flat-ui.css')}}" rel="stylesheet">
+<link href="{{url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700italic,700,500&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<style type="text/css">
+      body {
+        padding-top: 50px;
+        padding-bottom: 0px;
+	  }
+	  .mbr{
+		margin-bottom: 10px !important;
+	  }
+		.wrapper{
+		max-width:1170px;
+		margin-left:auto;
+		margin-right:auto;
+		overflow:hidden;
+		-webkit-box-shadow: 0px 0px 30px rgba(0,0,0, .4);
+			-moz-box-shadow: 0px 0px 30px rgba(0,0,0, .4);
+				box-shadow: 0px 0px 30px rgba(0,0,0, .4);
+	}
+    .carousel-inner .item{
+        max-height:550px;
+        overflow:hidden;
+    }
+    .carousel-control .icon-prev, .carousel-control .icon-next	{
+        font-size:120px;
+    }
+	.navbar {
+		margin-bottom: 0px;
+	}
+	 #foot-sec .jumbotron{
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+		-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+		border-right:0px;
+		border-left:0px;
+		background-color:#358cce;
+		color:#fff;
+		margin-top:-40px;
+	}
+	.thumbnail{
+		margin-bottom:30px;
+	}
+	footer{
+		padding-top:40px;
+		border-top:1px solid rgba(0,0,0, .3);
+	}
+	.related-projects{
+		padding-top:20px;
+		margin-top:20px;
+	}
+	@media (max-width: 979px){
+	}
+	@media (max-width: 992px){
+		body{
+			padding-top:0px;
+		}
+		.carousel-inner .item{
+			max-height:700px;
+			padding-bottom:50px;
+		}
+	}
+    </style>
+<link rel="shortcut icon" href="{{url_for('static', filename='icn/favicon.ico')}}">
+<body>
+<div class="wrapper">
+<header id="head-top">	
+<nav class="navbar navbar-inverse" role="navigation">
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#">DE.COM</a>
+	  </div>
+		
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+		<div class="navbar-right">
+			<a class="btn btn-danger navbar-btn" href="#">SIGN UP</a>
+			<a class="btn btn-success navbar-btn" href="#">SIGN IN</a>
+		</div>
+	</div><!-- /.navbar-collapse --> 
+
+</nav>
+	
+    <!-- PAGE-HEADER-->
+	<div id="myCarousel" class="carousel slide">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          
+          <div class="container">
+			<div class="row" >
+				<div class="visible-md visible-lg col-sm-5 col-lg-5 text-center">
+					<img src="{{url_for('static', filename='icn/hand.png')}}" alt="First slide">
+				</div>
+				<div class=" col-xs-12 col-sm-12 col-md-5 col-md-offset-1 col-lg-5 col-lg-offset-1" style="padding-top:50px;">
+					<h1 style="color:#1b82ec;">Digital Employee</h1>
+						<p class="lead">Family Bank PLC Introduces a DigitalEmployee Application (for Android V6+ and iOS V10+) to help you earn money during this #lockdown period. All you have to do is refer a customer to deposit with us and you earn commission daily forever!</p>
+						<p class="">Wondering how it all works? Relax. It is veeeeeery  easy and ABSOLUTELY free. Download the APP to get started. Earn from the comfort of your Home.</p>
+						<div class="row" >
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"> 
+								<a class="btn btn-lg btn-primary" href="" title=""><img class="img-responsive" src="{{url_for('static', filename='icn/googleplay.png')}}" alt="" ></a>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"> 
+								<a class="btn btn-lg btn-info" href="" title=""><img class="img-responsive" src="{{url_for('static', filename='icn/appstore.png')}}" alt="" ></a>
+							</div>
+						</div>
+				</div>
+			</div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="icon-prev"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="icon-next"></span></a>
+    </div>
+
+</header>
+<!-- PAGE-HEADER-->
+<div class="container">
+	<div class="row" style="padding-top:30px;">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+					<div class="page-header">
+						<h3 style="color:#1b82ec;">TAKE A LOOK AT APP FEATURES!</h3>
+					</div>
+				</div>
+	
+	<!-- ITEM-->
+        <div style="margin-bottom: 2% !important;" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mbr">
+			<div class="row">
+				<div class="text-center col-sm-2 col-lg-2">
+					<i class="icon-tablet icon-4x text-info"></i>
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<p> Two-field sign-up process for new users. The simpest way ever when creating an account</p>
+				</div>
+			</div>
+		</div>
+	<!-- / ITEM-->
+
+	<!-- ITEM-->
+        <div style="margin-bottom: 2% !important;" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mbr">
+			<div class="row">
+				<div class="text-center col-sm-2 col-lg-2">
+					<i class="icon-tablet icon-4x text-info"></i>
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<p> Promote Deposits and earn a commission on daily basis. Right from the comfort of your home</p>
+				</div>
+			</div>
+		</div>
+	<!-- / ITEM-->
+	
+<!-- ITEM-->
+        <div style="margin-bottom: 2% !important;" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mbr">
+			<div class="row">
+				<div class="text-center col-sm-2 col-lg-2">
+					<i class="icon-tablet icon-4x text-info"></i>
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<p> Withdraw your money any time anywhere. No hustles</p>
+				</div>
+			</div>
+		</div>
+	<!-- / ITEM-->
+	
+	<!-- ITEM-->
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mbr">
+			<div class="row">
+				<div class="text-center col-sm-2 col-lg-2" style="margin-bottom: 2% !important;">
+					<i class="icon-tablet icon-4x text-info"></i>
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<p>Be an agent for Agents. Agents Director. Interesting right!</p>
+				</div>
+			</div>
+		</div>
+	<!-- / ITEM-->		
+</div>
+
+	
+	<hr>
+	<div class="page-header text-center">
+		<h3 style="color:#1b82ec;">READY TO EARN? JUST CLICK BELOW BUTTON!</h3>
+	</div>
+ <!-- call to action -->
+ <div class="well">
+	<div class="row">
+		 <div class="col-xs-12 col-sm-12 col-lg-12 text-center">
+			<a class="btn btn-lg btn-danger" href="" title="" >DOWNLOAD APP NOW!</a>
+		</div>
+	</div>
+ </div>
+ <!-- call to action -->
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+			
+			<a class="navbar-brand" href="#">DE.COM</a>
+		  </div>
+		<ul class="nav navbar-nav navbar-right">
+			  <li><a href="#" title=""><i class="icon-twitter"></i></a></li>
+			<li><a href="#" title=""><i class="icon-facebook"></i></a></li>
+			<li><a href="#" title=""><i class="icon-google-plus"></i></a></li>
+			<li><a href="#" title=""><i class="icon-youtube"></i></a></li>	
+			<li><a href="#" title=""><i class="icon-dribbble"></i></a></li>
+			
+		</ul>
+	</div><!-- /.container -->
+</nav>
+</footer>
+</div>	<!-- /.wrapper -->
+
+<!-- /end WRAPPER-->
+
+    <!-- Le javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{url_for('static', filename='js/jquery.js')}}" type="text/javascript"></script>
+
+ 
+<!-- Latest compiled and minified JavaScript -->
+<script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+<script>
+ $('.carousel').carousel() 
+</script>
+
+</body>
+</html>
